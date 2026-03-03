@@ -1,8 +1,43 @@
-/* inicio */
+/* INICIO */
 :root{
   --card-radius: 14px;
   --card-border: 1px solid #e6e7eb;
   --cover-height: 140px;
   --cover-bg: linear-gradient(135deg,#1e293b,#0ea5e9);
   --shadow-hover: 0 10px 30px rgba(16,24,40,.12), 0 4px 10px rgba(16,24,40,.06);
+}
+
+html{box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background:#f5f6fa;
+  color:#0f172a;
+}
+
+/* Subject Card */
+.subject-card{
+  background:#fff;
+  border:var(--card-border);
+  border-radius:var(--card-radius);
+  overflow:hidden;
+  transition:box-shadow .25s ease, transform .25s ease;
+}
+.subject-card:hover{ box-shadow:var(--shadow-hover); transform:translateY(-2px) }
+
+.subject-card__cover{
+  height:var(--cover-height);
+  background:var(--cover-bg);
+}
+
+.subject-card__title{ font-weight:700; letter-spacing:.2px }
+.subject-card__teacher{ font-size:.95rem }
+
+.subject-card__badges{ gap:14px }
+.subject-card__badges .badge{ padding:.6rem 1rem; font-weight:600 }
+
+/* adaptación */
+@media (max-width: 575.98px){
+  .subject-card{ width:100% }
 }
