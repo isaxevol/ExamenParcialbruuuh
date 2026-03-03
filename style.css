@@ -55,3 +55,20 @@ body{
 @media (max-width: 575.98px){
   .subject-card{ width:100% }
 }
+
+/* Botón estilo pestaña gris/transparente */
+.subject-card__footer .btn{
+  background: rgba(255,255,255,0.3) !important;
+  border: 1px solid rgba(0,0,0,0.15) !important;
+  color: #333 !important;
+  box-shadow: none !important;
+  transition: background 0.3s, color 0.3s;
+}
+.subject-card__footer .btn:hover{
+  background: rgba(0,0,0,0.05) !important;
+  color: #000 !important;
+}
+.subject-card__footer .btn:active{
+  background: rgba(0,0,0,0.1) !important;
+}
+
